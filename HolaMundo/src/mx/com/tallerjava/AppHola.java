@@ -19,7 +19,7 @@ public class AppHola {
 			//da vuelta y 
 			metodoLogea(nombreCaminante, " da vuelta");
 			//camina 5 pasos hacia atras por   la calle Carlos Romero
-			for (int x = 1; x <= 5; x++) {
+			for (int x = 5; x > 0; x--) {
 				metodoLogea(nombreCaminante, " esta caminando " + x + " pasos hacia atras por Carlos Romero");
 			}
 			//camina sobre la calle paralela Adrian Trejo hasta que llegues a la otra esquina
