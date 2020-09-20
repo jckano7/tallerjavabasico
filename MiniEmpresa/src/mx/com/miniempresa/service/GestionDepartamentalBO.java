@@ -19,7 +19,7 @@ public class GestionDepartamentalBO {
 	}
 	
 	
-	private GestionDepartamentalDAO gestionDepartamentalDAO = new GestionDepartamentalDAO();
+	private GestionDepartamentalDAO gestionDepartamentalDAO = GestionDepartamentalDAO.generarInstancia();
 	
 	public void agregarEmpleadoBO(Empleado empleado) {
 		System.out.println("En la capa de Servicios ");

@@ -5,6 +5,19 @@ import mx.com.miniempresa.service.GestionDepartamentalBO;
 
 public class GestionDepartamentalApp {
 
+private static GestionDepartamentalApp gestionDepartamentalApp;
+	
+	private GestionDepartamentalApp () {
+		
+	}
+	
+	public static GestionDepartamentalApp generarInstancia() {
+		if(gestionDepartamentalApp == null) {
+			gestionDepartamentalApp = new GestionDepartamentalApp();
+		} 
+		return gestionDepartamentalApp;
+	}
+	
 	private GestionDepartamentalBO gestionDepartamentalBO = GestionDepartamentalBO.generarInstancia();
 	
 	public void agregarEmpleadoApp(Empleado empleado) {

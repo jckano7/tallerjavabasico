@@ -4,7 +4,6 @@ import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
 import mx.com.miniempresa.model.Empleado;
-import mx.com.miniempresa.service.GestionDepartamentalBO;
 
 public class App {
 
@@ -17,7 +16,7 @@ public class App {
 		juanitoPerez.setEdad(25);
 		juanitoPerez.setFechaIngreso(new Date());
 		
-		GestionDepartamentalApp gestionDepartamentalApp1 = new GestionDepartamentalApp();
+		GestionDepartamentalApp gestionDepartamentalApp1 = GestionDepartamentalApp.generarInstancia();
 		gestionDepartamentalApp1.agregarEmpleadoApp(juanitoPerez);
 		
 		
