@@ -1,6 +1,7 @@
 package mx.com.miniempresa.app;
 
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Ventas;
 import mx.com.miniempresa.service.GestionDepartamentalBO;
 
 public class GestionDepartamentalApp {
@@ -26,5 +27,9 @@ private static GestionDepartamentalApp gestionDepartamentalApp;
 		gestionDepartamentalBO.agregarEmpleadoBO(empleado);
 	}
 	
+	public void agregarVentaApp(Ventas venta) {
+		System.out.println("Ingresar venta");
+		gestionDepartamentalBO.agregarVentasBO(venta);
+	}
 	
 }

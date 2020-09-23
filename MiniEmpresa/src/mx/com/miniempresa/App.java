@@ -4,6 +4,7 @@ import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Ventas;
 
 public class App {
 
@@ -19,7 +20,16 @@ public class App {
 		GestionDepartamentalApp gestionDepartamentalApp1 = GestionDepartamentalApp.generarInstancia();
 		gestionDepartamentalApp1.agregarEmpleadoApp(juanitoPerez);
 		
+		Ventas primerVenta = new Ventas();
+		primerVenta.setProducto("Perico");
+		primerVenta.setPrecio(500);
+		primerVenta.setGanancia(350);
+		primerVenta.setCantidad(50);
+		primerVenta.setProveedor("Juanito");
+		primerVenta.setFechaVenta(new Date());
 		
+		GestionDepartamentalApp gestionDepartametalApp2 = GestionDepartamentalApp.generarInstancia();
+		gestionDepartametalApp2.agregarVentaApp(primerVenta);
 		
 	}
 
