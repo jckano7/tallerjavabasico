@@ -52,6 +52,7 @@ public class App {
 		
 		//Ejemplo de uso GIT
 		System.out.println("Jaime Cano Martinez");
+		System.out.println("Itzel Ortiz Tellez");
 		
 		
 		
