@@ -4,6 +4,7 @@ import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Proveedores;
 import mx.com.miniempresa.model.Proyectos;
 import mx.com.miniempresa.model.Ventas;
 
@@ -40,6 +41,19 @@ public class App {
 		
 		GestionDepartamentalApp gestionDepartametalApp3 = GestionDepartamentalApp.generarInstancia();
 		gestionDepartametalApp3.agregarProyectoApp(nombreDelProyecto);
+		
+		Proveedores optenermercancia =  new Proveedores();
+		optenermercancia.setNombreDeProvedor("El cholo de chalco");
+		optenermercancia.setNombreDelProducto("Cocaina");
+		optenermercancia.setCostoAPagar(1000);
+		optenermercancia.setFechaAPedir(new Date());
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
