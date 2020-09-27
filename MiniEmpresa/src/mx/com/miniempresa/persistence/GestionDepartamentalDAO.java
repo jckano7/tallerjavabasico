@@ -1,6 +1,7 @@
 package mx.com.miniempresa.persistence;
 
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Proyectos;
 import mx.com.miniempresa.model.Ventas;
 
 public class GestionDepartamentalDAO {
@@ -36,6 +37,14 @@ public class GestionDepartamentalDAO {
 		System.out.println(venta.getCantidad());
 		System.out.println(venta.getProveedor());
 		System.out.println(venta.getFechaVenta());
+	}
+	
+	public void agregarPreoyectoDAO(Proyectos proyecto) {
+		System.out.println("En la capa de Acceso a Datos");
+		System.out.println("Persistiendo información de proyecto");
+		System.out.println(proyecto.getFechaInicio());
+		System.out.println(proyecto.getFechaRevision());
+		System.out.println(proyecto.getFechaCierre());
 	}
 	
 	}

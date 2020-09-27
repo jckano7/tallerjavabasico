@@ -1,6 +1,7 @@
 package mx.com.miniempresa.app;
 
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Proyectos;
 import mx.com.miniempresa.model.Ventas;
 import mx.com.miniempresa.service.GestionDepartamentalBO;
 
@@ -31,5 +32,11 @@ private static GestionDepartamentalApp gestionDepartamentalApp;
 		System.out.println("Ingresar venta");
 		gestionDepartamentalBO.agregarVentasBO(venta);
 	}
+	
+	public void agregarProyectoApp(Proyectos proyecto) {
+		System.out.println("Ingresar Proyecto");
+		gestionDepartamentalBO.agregarProyectosBO(proyecto);
+	}
+
 	
 }

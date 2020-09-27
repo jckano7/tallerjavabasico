@@ -4,6 +4,7 @@ import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Proyectos;
 import mx.com.miniempresa.model.Ventas;
 
 public class App {
@@ -30,6 +31,15 @@ public class App {
 		
 		GestionDepartamentalApp gestionDepartametalApp2 = GestionDepartamentalApp.generarInstancia();
 		gestionDepartametalApp2.agregarVentaApp(primerVenta);
+		
+		Proyectos nombreDelProyecto = new Proyectos();
+		nombreDelProyecto.setNombre("Distribución");
+		nombreDelProyecto.setFechaInicio(new Date());
+		nombreDelProyecto.setFechaRevision(new Date());
+		nombreDelProyecto.setFechaCierre(new Date());
+		
+		GestionDepartamentalApp gestionDepartametalApp3 = GestionDepartamentalApp.generarInstancia();
+		gestionDepartametalApp3.agregarProyectoApp(nombreDelProyecto);
 		
 	}
 

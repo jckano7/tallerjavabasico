@@ -1,6 +1,7 @@
 package mx.com.miniempresa.service;
 
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.model.Proyectos;
 import mx.com.miniempresa.model.Ventas;
 import mx.com.miniempresa.persistence.GestionDepartamentalDAO;
 
@@ -32,5 +33,11 @@ public class GestionDepartamentalBO {
 		System.out.println("En la capa de Servicios");
 		System.out.println("Reglas de venta");
 		gestionDepartamentalDAO.agregarVentaDAO(venta);
+	}
+	
+	public void agregarProyectosBO(Proyectos proyecto) {
+		System.out.println("En la capa de Servicios");
+		System.out.println("Reglas de proyecto");
+		gestionDepartamentalDAO.agregarPreoyectoDAO(proyecto);
 	}
 }
