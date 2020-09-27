@@ -34,7 +34,7 @@ public class App {
 		gestionDepartametalApp2.agregarVentaApp(primerVenta);
 		
 		Proyectos nombreDelProyecto = new Proyectos();
-		nombreDelProyecto.setNombre("Distribución");
+		nombreDelProyecto.setNombre("Distribuciï¿½n");
 		nombreDelProyecto.setFechaInicio(new Date());
 		nombreDelProyecto.setFechaRevision(new Date());
 		nombreDelProyecto.setFechaCierre(new Date());
@@ -50,7 +50,8 @@ public class App {
 		
 		
 		
-		
+		//Ejemplo de uso GIT
+		System.out.println("Jaime Cano Martinez");
 		
 		
 		
