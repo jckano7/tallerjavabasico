@@ -54,7 +54,7 @@ public class App {
 		System.out.println("Jaime Cano Martinez");
 		System.out.println("Itzel Ortiz Tellez");
 		
-		System.out.println("Jesus Adrian Trejo Perez");
+		System.out.println("Adrian Trejo Perez");
 		
 		
 		
