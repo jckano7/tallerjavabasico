@@ -56,6 +56,8 @@ public class App {
 		
 		//marca de Ivonne
 		System.out.println( "Ivonne Cano Mendoza");
+		System.out.println("Adrian Trejo Perez");
+		
 		
 		
 	}
