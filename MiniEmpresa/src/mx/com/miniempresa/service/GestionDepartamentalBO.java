@@ -24,10 +24,15 @@ public class GestionDepartamentalBO {
 	
 	private GestionDepartamentalDAO gestionDepartamentalDAO = GestionDepartamentalDAO.generarInstancia();
 	
-	public void agregarEmpleadoBO(Empleado empleado) {
+	public int agregarEmpleadoBO(Empleado empleado) {
+		//Si se llama Juan Perez no permitir agregar
 		System.out.println("En la capa de Servicios ");
+		if(empleado.getNombre().equals("Juan Perez")) {
+			return 1;
+		}
 		//TODO aqui se evaluan las reglas de negocio para agregar un empleado
 		gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
+		return 0;
 	}
 	
 	public void agregarVentasBO(Ventas venta) {
