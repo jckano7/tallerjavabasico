@@ -29,17 +29,6 @@ public class GestionDepartamentalDAO {
 		System.out.println(empleado.getNombre());
 	}
 	
-	public void agregarVentaDAO(Ventas venta) {
-		System.out.println("En la capa de Acceso a Datos");
-		System.out.println("Persistiendo información de venta");
-		System.out.println(venta.getProducto());
-		System.out.println(venta.getPrecio());
-		System.out.println(venta.getGanancia());
-		System.out.println(venta.getCantidad());
-		System.out.println(venta.getProveedor());
-		System.out.println(venta.getFechaVenta());
-	}
-	
 	public void agregarPreoyectoDAO(Proyectos proyecto) {
 		System.out.println("En la capa de Acceso a Datos");
 		System.out.println("Persistiendo información de proyecto");

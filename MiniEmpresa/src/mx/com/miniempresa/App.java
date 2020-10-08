@@ -3,6 +3,7 @@ package mx.com.miniempresa;
 import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
+import mx.com.miniempresa.app.VentanaGestionDepartamento;
 import mx.com.miniempresa.model.Empleado;
 import mx.com.miniempresa.model.Proveedores;
 import mx.com.miniempresa.model.Proyectos;
@@ -48,6 +49,7 @@ public class App {
 		optenermercancia.setCostoAPagar(1000);
 		optenermercancia.setFechaAPedir(new Date());
 		
+		VentanaGestionDepartamento
 		
 		
 		//Ejemplo de uso GIT
@@ -58,7 +60,7 @@ public class App {
 		System.out.println( "Ivonne Cano Mendoza");
 		System.out.println("Adrian Trejo Perez");
 		
-	System.out.println("Rodrigo Misael");
+	    System.out.println("Rodrigo Misael");
 		
 		
 	}

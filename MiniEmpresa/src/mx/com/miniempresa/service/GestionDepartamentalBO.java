@@ -30,12 +30,6 @@ public class GestionDepartamentalBO {
 		gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
 	}
 	
-	public void agregarVentasBO(Ventas venta) {
-		System.out.println("En la capa de Servicios");
-		System.out.println("Reglas de venta");
-		gestionDepartamentalDAO.agregarVentaDAO(venta);
-	}
-	
 	public void agregarProyectosBO(Proyectos proyecto) {
 		System.out.println("En la capa de Servicios");
 		System.out.println("Reglas de proyecto");

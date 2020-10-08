@@ -29,11 +29,6 @@ private static GestionDepartamentalApp gestionDepartamentalApp;
 		gestionDepartamentalBO.agregarEmpleadoBO(empleado);
 	}
 	
-	public void agregarVentaApp(Ventas venta) {
-		System.out.println("Ingresar venta");
-		gestionDepartamentalBO.agregarVentasBO(venta);
-	}
-	
 	public void agregarProyectoApp(Proyectos proyecto) {
 		System.out.println("Ingresar Proyecto");
 		gestionDepartamentalBO.agregarProyectosBO(proyecto);
