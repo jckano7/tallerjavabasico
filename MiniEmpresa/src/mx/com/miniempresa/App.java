@@ -3,7 +3,13 @@ package mx.com.miniempresa;
 import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
+<<<<<<< HEAD
 import mx.com.miniempresa.app.VentanaGestionDepartamento;
+=======
+import mx.com.miniempresa.app.VentanaGestionClientes;
+import mx.com.miniempresa.app.VentanaGestionDepartamento;
+import mx.com.miniempresa.model.Clientes;
+>>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
 import mx.com.miniempresa.model.Empleado;
 import mx.com.miniempresa.model.Proveedores;
 import mx.com.miniempresa.model.Proyectos;
@@ -13,6 +19,7 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		Empleado juanitoPerez = new Empleado();
 		juanitoPerez.setNombre("Juan");
 		juanitoPerez.setApellidoPaterno("Perez");
@@ -49,18 +56,30 @@ public class App {
 		optenermercancia.setCostoAPagar(1000);
 		optenermercancia.setFechaAPedir(new Date());
 		
+<<<<<<< HEAD
 		VentanaGestionDepartamento
+=======
+		Clientes nuevoCliente = new Clientes();
+		nuevoCliente.setNombres("Jesus Adrian");
+		nuevoCliente.setApellidos("Trejo Perez");
+		nuevoCliente.setCompania("SoyBeep");
+		nuevoCliente.setEdad(23);
+		nuevoCliente.setIngresosMensuales(2000);
+>>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
+		
+	     VentanaGestionDepartamento ventana = new VentanaGestionDepartamento();
+		ventana.show();
 		
 		
-		//Ejemplo de uso GIT
-		System.out.println("Jaime Cano Martinez");
-		System.out.println("Itzel Ortiz Tellez");
+		VentanaGestionClientes ventanaClientes = new VentanaGestionClientes();
+		ventanaClientes.show();
 		
-		//marca de Ivonne
-		System.out.println( "Ivonne Cano Mendoza");
-		System.out.println("Adrian Trejo Perez");
-		
+<<<<<<< HEAD
 	    System.out.println("Rodrigo Misael");
+=======
+	
+
+>>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
 		
 		
 	}
