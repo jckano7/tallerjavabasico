@@ -3,13 +3,10 @@ package mx.com.miniempresa;
 import java.util.Date;
 
 import mx.com.miniempresa.app.GestionDepartamentalApp;
-<<<<<<< HEAD
+import mx.com.miniempresa.app.GestionVentasApp;
 import mx.com.miniempresa.app.VentanaGestionDepartamento;
-=======
 import mx.com.miniempresa.app.VentanaGestionClientes;
-import mx.com.miniempresa.app.VentanaGestionDepartamento;
 import mx.com.miniempresa.model.Clientes;
->>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
 import mx.com.miniempresa.model.Empleado;
 import mx.com.miniempresa.model.Proveedores;
 import mx.com.miniempresa.model.Proyectos;
@@ -38,8 +35,8 @@ public class App {
 		primerVenta.setProveedor("Juanito");
 		primerVenta.setFechaVenta(new Date());
 		
-		GestionDepartamentalApp gestionDepartametalApp2 = GestionDepartamentalApp.generarInstancia();
-		gestionDepartametalApp2.agregarVentaApp(primerVenta);
+		GestionVentasApp gestionVentasApp1 = GestionVentasApp.generarInstancia();
+		gestionVentasApp1.agregarVentaApp(primerVenta);
 		
 		Proyectos nombreDelProyecto = new Proyectos();
 		nombreDelProyecto.setNombre("Distribuci�n");
@@ -55,32 +52,23 @@ public class App {
 		optenermercancia.setNombreDelProducto("Cocaina");
 		optenermercancia.setCostoAPagar(1000);
 		optenermercancia.setFechaAPedir(new Date());
-		
-<<<<<<< HEAD
-		VentanaGestionDepartamento
-=======
+	
 		Clientes nuevoCliente = new Clientes();
 		nuevoCliente.setNombres("Jesus Adrian");
 		nuevoCliente.setApellidos("Trejo Perez");
 		nuevoCliente.setCompania("SoyBeep");
 		nuevoCliente.setEdad(23);
 		nuevoCliente.setIngresosMensuales(2000);
->>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
 		
-	     VentanaGestionDepartamento ventana = new VentanaGestionDepartamento();
+	    VentanaGestionDepartamento ventana = new VentanaGestionDepartamento();
 		ventana.show();
 		
 		
 		VentanaGestionClientes ventanaClientes = new VentanaGestionClientes();
 		ventanaClientes.show();
 		
-<<<<<<< HEAD
 	    System.out.println("Rodrigo Misael");
-=======
-	
 
->>>>>>> aa5df50ad03063c3d7319ec85ffc1f94b8d11ea1
-		
 		
 	}
 
