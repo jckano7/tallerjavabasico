@@ -22,10 +22,11 @@ private static GestionVentasBO gestionVentasBO;
 	
 	private GestionVentasDAO gestionVentasDAO = GestionVentasDAO.generarInstancia();
 	
-	public void agregarVentasBO(Ventas venta) {
+	public int agregarVentasBO(Ventas venta) {
 		System.out.println("En la capa de Servicios");
 		System.out.println("Reglas de venta");
 		gestionVentasDAO.agregarVentaDAO(venta);
+		return 0;
 	}
 
 }
