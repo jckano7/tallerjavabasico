@@ -1,6 +1,7 @@
 package mx.com.miniempresa.persistence;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -29,30 +30,21 @@ public class GestionDepartamentalDAO {
 	
 	public void agregarEmpleadoDAO(Empleado empleado) throws IOException {
 		
-		File archivo = new File("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt");
-		
-		if(archivo.exists())
-		{
-			FileReader archivoLeer = new FileReader(archivo);
-			BufferedReader buffer = new BufferedReader(archivoLeer);
-			String linea;
-			do {
-				linea = buffer.readLine();
-				System.out.println(linea);
-			}while(linea != null);
-			archivoLeer.close();
-		}else {
-			archivo.createNewFile();
-		}
-		
-		/*FileWriter archivoEscribir = new FileWriter("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt");
+		FileWriter archivoEscribir = new FileWriter("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt", true);
 		
 		PrintWriter impresor = new PrintWriter(archivoEscribir);
-		impresor.print("Ap paterno: " + empleado.getApellidoPaterno());
-		impresor.print("Ap materno: " + empleado.getApellidoMaterno());
-		impresor.print("Nombre: " + empleado.getNombre());
-		archivoEscribir.close();*/
+		impresor.println("Nombre Empleado: " + empleado.getNombre());
+		archivoEscribir.close();
 		
+		
+		/*FileReader archivoLeer = new FileReader(archivo);
+		BufferedReader buffer = new BufferedReader(archivoLeer);
+		String linea;
+		do {
+			linea = buffer.readLine();
+			System.out.println(linea);
+		}while(linea != null);
+		archivoLeer.close();*/
 		
 		
 	}
