@@ -1,5 +1,12 @@
 package mx.com.miniempresa.persistence;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 import mx.com.miniempresa.model.Empleado;
 import mx.com.miniempresa.model.Proveedores;
 import mx.com.miniempresa.model.Proyectos;
@@ -20,18 +27,39 @@ public class GestionDepartamentalDAO {
 		return gestionDepartamentalDAO;
 	}
 	
-	public void agregarEmpleadoDAO(Empleado empleado) {
-		System.out.println("En la capa de Acceso a Datos ");
-		//TODO aqui se persistira la informacion del empleado
-		System.out.println("Persistiendo informacion de empleado: ");
-		System.out.println(empleado.getApellidoPaterno());
-		System.out.println(empleado.getApellidoMaterno());
-		System.out.println(empleado.getNombre());
+	public void agregarEmpleadoDAO(Empleado empleado) throws IOException {
+		
+		File archivo = new File("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt");
+		
+		if(archivo.exists())
+		{
+			FileReader archivoLeer = new FileReader(archivo);
+			BufferedReader buffer = new BufferedReader(archivoLeer);
+			String linea;
+			do {
+				linea = buffer.readLine();
+				System.out.println(linea);
+			}while(linea != null);
+			archivoLeer.close();
+		}else {
+			archivo.createNewFile();
+		}
+		
+		/*FileWriter archivoEscribir = new FileWriter("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt");
+		
+		PrintWriter impresor = new PrintWriter(archivoEscribir);
+		impresor.print("Ap paterno: " + empleado.getApellidoPaterno());
+		impresor.print("Ap materno: " + empleado.getApellidoMaterno());
+		impresor.print("Nombre: " + empleado.getNombre());
+		archivoEscribir.close();*/
+		
+		
+		
 	}
 	
 	public void agregarPreoyectoDAO(Proyectos proyecto) {
 		System.out.println("En la capa de Acceso a Datos");
-		System.out.println("Persistiendo información de proyecto");
+		System.out.println("Persistiendo informaciï¿½n de proyecto");
 		System.out.println(proyecto.getFechaInicio());
 		System.out.println(proyecto.getFechaRevision());
 		System.out.println(proyecto.getFechaCierre());
@@ -39,7 +67,7 @@ public class GestionDepartamentalDAO {
 	}
 	public void agregarProveedorDAO(Proveedores proveedor) {
 		System.out.println("En la capa de Acceso a Datos");
-		System.out.println("Persistiendo información de provedor");	
+		System.out.println("Persistiendo informaciï¿½n de provedor");	
 		System.out.println(proveedor.getNombreDeProvedor());
 		System.out.println(proveedor.getNombreDelProducto());
 		System.out.println(proveedor.getCostoAPagar());

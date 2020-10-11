@@ -25,14 +25,24 @@ public class GestionDepartamentalBO {
 	private GestionDepartamentalDAO gestionDepartamentalDAO = GestionDepartamentalDAO.generarInstancia();
 	
 	public int agregarEmpleadoBO(Empleado empleado) {
-		//Si se llama Juan Perez no permitir agregar
-		System.out.println("En la capa de Servicios ");
-		if(empleado.getNombre().equals("Juan Perez")) {
-			return 1;
+		int ret = 1;		
+		try {
+			//Si se llama Juan Perez no permitir agregar
+			System.out.println("En la capa de Servicios ");
+			if(empleado.getNombre().equals("Juan Perez")) {
+				ret = 1;
+			}
+			//TODO aqui se evaluan las reglas de negocio para agregar un empleado
+			gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
+			ret = 0;
+		} catch (ArithmeticException | NullPointerException e) {
+			System.out.println("Excepcion aritmetica controlada: " + e);
+			ret = 2;
+		} catch (Exception e) {
+			System.out.println("Excepcion controlada: " + e);
+			ret = 2;
 		}
-		//TODO aqui se evaluan las reglas de negocio para agregar un empleado
-		gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
-		return 0;
+		return ret;
 	}
 	
 	public void agregarProyectosBO(Proyectos proyecto) {

@@ -1,6 +1,7 @@
 package mx.com.miniempresa;
 
 import mx.com.miniempresa.app.VentanaGestionClientes;
+import mx.com.miniempresa.app.VentanaGestionDepartamento;
 import mx.com.miniempresa.app.VentanaGestionVentas;
 
 public class App {
@@ -16,6 +17,11 @@ public class App {
 		
 		//Ivonne, Rodrigo, Karen, Monse, Carlos
 		//=(
+		
+		//JCM
+		VentanaGestionDepartamento ventanaDepartamenal = new VentanaGestionDepartamento();
+		ventanaDepartamenal.show();
+				
 	}
 
 }

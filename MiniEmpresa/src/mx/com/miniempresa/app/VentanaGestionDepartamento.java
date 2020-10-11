@@ -48,8 +48,11 @@ public class VentanaGestionDepartamento extends JFrame{
 				if (resultado == 0) {
 					JOptionPane.showMessageDialog(null, "El usuario se guardo con exito");
 					campoTexto.setText("");
-				}else {
-					JOptionPane.showMessageDialog(null, "El usuario no se puede guardar");
+				}else if (resultado == 1) {
+					JOptionPane.showMessageDialog(null, "El se llama Juan Perez y por eso no se guardo");
+					campoTexto.setText("");
+				}else{
+					JOptionPane.showMessageDialog(null, "Ocurrio un error y no se guardo");
 					campoTexto.setBackground(Color.RED);
 				}
 			}
