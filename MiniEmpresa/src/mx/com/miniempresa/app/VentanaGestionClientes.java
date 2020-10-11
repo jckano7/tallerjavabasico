@@ -18,11 +18,12 @@ import javax.swing.JTextField;
 
 import mx.com.miniempresa.model.Clientes;
 import mx.com.miniempresa.model.Empleado;
+import mx.com.miniempresa.service.GestionClienteBO;
 import mx.com.miniempresa.service.GestionDepartamentalBO;
 
 public class VentanaGestionClientes extends JFrame{
 
-	private GestionDepartamentalBO gestionDepartamentalBO =  GestionDepartamentalBO.generarInstancia();
+	private GestionClienteBO gestionClienteBO =  GestionClienteBO.generarInstancia();
 	
 	public VentanaGestionClientes() {
 			super("Agregar Cliente");
@@ -41,7 +42,7 @@ public class VentanaGestionClientes extends JFrame{
 		JLabel etiquetaEdad = new JLabel("Edad");
 		JTextField entryEdad = new JTextField(10);
 		
-		JLabel etiquetaCompania = new JLabel("Compañia");
+		JLabel etiquetaCompania = new JLabel("Compaï¿½ia");
 		JTextField entryCompania = new JTextField(10);
 		
 		JLabel etiquetaIngresosMensuales = new JLabel("Ingreso Mensual");
@@ -66,7 +67,7 @@ public class VentanaGestionClientes extends JFrame{
         		  clienteN.setNombres(entryEdad.getText());
         		  clienteN.setNombres(entryCompania.getText());
         		  clienteN.setNombres(entryIngresosMensuales.getText());
-
+        		  gestionClienteBO.agregarclienteBO(clienteN);
 					
         			  JOptionPane.showMessageDialog(null, "Se guardo correcto");
 	
