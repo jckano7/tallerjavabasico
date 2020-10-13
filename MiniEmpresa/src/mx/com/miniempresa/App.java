@@ -8,8 +8,8 @@ public class App {
 
 	public static void main(String[] args) {
 		//Adrian
-		//VentanaGestionClientes ventanaClientes = new VentanaGestionClientes();
-		//ventanaClientes.show();
+		VentanaGestionClientes ventanaClientes = new VentanaGestionClientes();
+		ventanaClientes.show();
 		
 		//Itzel
 		//VentanaGestionVentas ventanaVentas = new VentanaGestionVentas();
@@ -19,8 +19,8 @@ public class App {
 		//=(
 		
 		//JCM
-		VentanaGestionDepartamento ventanaDepartamenal = new VentanaGestionDepartamento();
-		ventanaDepartamenal.show();
+		//VentanaGestionDepartamento ventanaDepartamenal = new VentanaGestionDepartamento();
+		//ventanaDepartamenal.show();
 				
 	}
 
