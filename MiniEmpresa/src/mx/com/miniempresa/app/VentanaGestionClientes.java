@@ -63,10 +63,10 @@ public class VentanaGestionClientes extends JFrame{
         		  Clientes clienteN = new Clientes();
         		  
         		  clienteN.setNombres(entryNombres.getText());
-        		  clienteN.setNombres(entryApellidos.getText());
-        		  clienteN.setNombres(entryEdad.getText());
-        		  clienteN.setNombres(entryCompania.getText());
-        		  clienteN.setNombres(entryIngresosMensuales.getText());
+        		  clienteN.setApellidos(entryApellidos.getText());
+        		  clienteN.setEdad(Integer.parseInt(entryEdad.getText()));
+        		  clienteN.setCompania(entryCompania.getText());
+        		  clienteN.setIngresosMensuales(Integer.parseInt(entryIngresosMensuales.getText()));
         		  gestionClienteBO.agregarclienteBO(clienteN);
 					
         			  JOptionPane.showMessageDialog(null, "Se guardo correcto");
