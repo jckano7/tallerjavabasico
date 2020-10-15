@@ -31,9 +31,13 @@ public class GestionClienteBO {
 			System.out.println("En la capa de Servicios");
 			
 			
-			if (cliente.getEdad() < 10 || cliente.getEdad() > 100) {
+			if (cliente.getEdad() < 15 || cliente.getEdad() > 100) {
 				
 				opcion=1;
+				
+			}else if(cliente.getNombres().equals("") || cliente.getApellidos().equals("") || cliente.getCompania().equals("")) {
+				
+				opcion = 3;
 				
 			}
 			else {

@@ -76,7 +76,12 @@ public class VentanaGestionClientes extends JFrame{
   				}else if (resultado == 1) {
   					JOptionPane.showMessageDialog(null, "Tu edad es dudosa y no se guardo");
   					
-  				}else{
+  				}else if(resultado == 3) {
+  					
+  					JOptionPane.showMessageDialog(null, "Hay Campos vacios Verificar");
+  				}
+  				
+  				else{
   					JOptionPane.showMessageDialog(null, "Ocurrio un error verifica los tipos de datos");
   					
   				}
