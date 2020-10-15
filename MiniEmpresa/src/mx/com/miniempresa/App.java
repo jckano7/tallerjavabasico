@@ -20,7 +20,7 @@ public class App {
 		
 		//JCM
 		//VentanaGestionDepartamento ventanaDepartamenal = new VentanaGestionDepartamento();
-		//ventanaDepartamenal.show();
+	    //ventanaDepartamenal.show();
 				
 	}
 

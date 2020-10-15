@@ -42,7 +42,7 @@ public class VentanaGestionClientes extends JFrame{
 		JLabel etiquetaEdad = new JLabel("Edad");
 		JTextField entryEdad = new JTextField(10);
 		
-		JLabel etiquetaCompania = new JLabel("Compaï¿½ia");
+		JLabel etiquetaCompania = new JLabel("Compañia");
 		JTextField entryCompania = new JTextField(10);
 		
 		JLabel etiquetaIngresosMensuales = new JLabel("Ingreso Mensual");
@@ -59,18 +59,28 @@ public class VentanaGestionClientes extends JFrame{
 			
         	  public void actionPerformed(ActionEvent e) {
         		 
-        		  Empleado empleado1 = new Empleado();
         		  Clientes clienteN = new Clientes();
+        		 
         		  
         		  clienteN.setNombres(entryNombres.getText());
         		  clienteN.setApellidos(entryApellidos.getText());
         		  clienteN.setEdad(Integer.parseInt(entryEdad.getText()));
         		  clienteN.setCompania(entryCompania.getText());
         		  clienteN.setIngresosMensuales(Integer.parseInt(entryIngresosMensuales.getText()));
-        		  gestionClienteBO.agregarclienteBO(clienteN);
+        		  
+        		  int resultado = gestionClienteBO.agregarclienteBO(clienteN); 
 					
-        			  JOptionPane.showMessageDialog(null, "Se guardo correcto");
-	
+        		  if (resultado == 0) {
+  					JOptionPane.showMessageDialog(null, "El usuario se guardo con exito");
+  					
+  				}else if (resultado == 1) {
+  					JOptionPane.showMessageDialog(null, "Tu edad es dudosa y no se guardo");
+  					
+  				}else{
+  					JOptionPane.showMessageDialog(null, "Ocurrio un error verifica los tipos de datos");
+  					
+  				}
+        		  
         		  
         	  }	
         	});

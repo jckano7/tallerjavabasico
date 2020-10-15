@@ -29,12 +29,18 @@ public class GestionDepartamentalBO {
 		try {
 			//Si se llama Juan Perez no permitir agregar
 			System.out.println("En la capa de Servicios ");
+			
 			if(empleado.getNombre().equals("Juan Perez")) {
 				ret = 1;
+			}else{
+				
+				gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
+				ret = 0;
+				
 			}
-			//TODO aqui se evaluan las reglas de negocio para agregar un empleado
-			gestionDepartamentalDAO.agregarEmpleadoDAO(empleado);
-			ret = 0;
+			
+;
+		
 		} catch (ArithmeticException | NullPointerException e) {
 			System.out.println("Excepcion aritmetica controlada: " + e);
 			ret = 2;

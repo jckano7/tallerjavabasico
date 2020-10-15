@@ -30,7 +30,10 @@ public class GestionDepartamentalDAO {
 	
 	public void agregarEmpleadoDAO(Empleado empleado) throws IOException {
 		
-		FileWriter archivoEscribir = new FileWriter("/Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt", true);
+		///Users/Dell/Documents/Workspace/Tallerjavabasico/
+		///Users/jckano/workspace/tallerjava/tallerjavabasico/clientes.txt
+		
+		FileWriter archivoEscribir = new FileWriter("/Users/Dell/Documents/Workspace/Tallerjavabasico/empleado.txt", true);
 		
 		PrintWriter impresor = new PrintWriter(archivoEscribir);
 		impresor.println("Nombre Empleado: " + empleado.getNombre());

@@ -23,10 +23,39 @@ public class GestionClienteBO {
 	
 	private GestionClienteDAO gestionClienteDAO = GestionClienteDAO.generarInstancia();
 	
-	public void agregarclienteBO(Clientes cliente) {
-		System.out.println("En la capa de Servicios");
-		System.out.println("Reglas de Cliente");
-		gestionClienteDAO.agregarClienteDAO(cliente);
+	public int agregarclienteBO(Clientes cliente) {
+		
+		int opcion = 1;
+		
+		try {
+			System.out.println("En la capa de Servicios");
+			
+			
+			if (cliente.getEdad() < 10 || cliente.getEdad() > 100) {
+				
+				opcion=1;
+				
+			}
+			else {
+				
+				gestionClienteDAO.agregarClienteDAO(cliente);
+				opcion = 0;
+				
+			}
+			
+
+			
+		}catch (ArithmeticException | NullPointerException e) {
+			System.out.println("Excepcion aritmetica controlada: " + e);
+			opcion =  2;
+		}catch (Exception e) {
+			System.out.println("Excepcion controlada: " + e);
+			opcion = 2;
+		}
+		
+		return opcion;
+		
+	
 	}
 	
 	
