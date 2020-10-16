@@ -35,7 +35,7 @@ public class GestionClienteBO {
 				
 				opcion=1;
 				
-			}else if(cliente.getNombres().equals("") || cliente.getApellidos().equals("") || cliente.getCompania().equals("")) {
+			}else if(cliente.getNombres().equals("") || cliente.getApellidos().equals("") || cliente.getCompania().equals("") ) {
 				
 				opcion = 3;
 				

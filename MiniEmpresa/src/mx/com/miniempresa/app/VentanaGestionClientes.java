@@ -23,6 +23,8 @@ import mx.com.miniempresa.service.GestionDepartamentalBO;
 
 public class VentanaGestionClientes extends JFrame{
 
+	int resultado;
+	
 	private GestionClienteBO gestionClienteBO =  GestionClienteBO.generarInstancia();
 	
 	public VentanaGestionClientes() {
@@ -61,6 +63,12 @@ public class VentanaGestionClientes extends JFrame{
         		 
         		  Clientes clienteN = new Clientes();
         		 
+        		  if(entryEdad.getText().length()==0 || entryIngresosMensuales.getText().length()==0 ){
+        			  
+        			  resultado = 3;
+        			  
+        		  }else {
+ 
         		  
         		  clienteN.setNombres(entryNombres.getText());
         		  clienteN.setApellidos(entryApellidos.getText());
@@ -68,13 +76,22 @@ public class VentanaGestionClientes extends JFrame{
         		  clienteN.setCompania(entryCompania.getText());
         		  clienteN.setIngresosMensuales(Integer.parseInt(entryIngresosMensuales.getText()));
         		  
-        		  int resultado = gestionClienteBO.agregarclienteBO(clienteN); 
+        		  resultado = gestionClienteBO.agregarclienteBO(clienteN); 
+        		  }
 					
         		  if (resultado == 0) {
   					JOptionPane.showMessageDialog(null, "El usuario se guardo con exito");
   					
+  					entryNombres.setText("");
+  					entryApellidos.setText("");
+  					entryCompania.setText("");
+  					entryEdad.setText("");
+  					entryIngresosMensuales.setText("");
+  					
+  					
   				}else if (resultado == 1) {
   					JOptionPane.showMessageDialog(null, "Tu edad es dudosa y no se guardo");
+  					entryEdad.setText("");
   					
   				}else if(resultado == 3) {
   					
